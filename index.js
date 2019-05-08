@@ -1,5 +1,6 @@
 
-export const mtrim = (str) => str.split( '\n' ).map(x => x.trim()).join('\n')
+const mtrim = (str) => str.split( '\n' ).map(x => x.trim()).join('\n');
+module.exports = { mtrim };
 
 const example = ` 
   this
@@ -7,7 +8,7 @@ const example = `
     a
 multiline
   string
-`
+`;
 
 console.log(
   `
@@ -15,4 +16,4 @@ console.log(
 
           trimmed: ${mtrim(example)}
   `
-)
+);
