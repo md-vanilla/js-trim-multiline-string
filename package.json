@@ -1,6 +1,6 @@
 {
   "name": "js-trim-multiline-string",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "easy multiline syntax for javascript",
   "main": "index.js",
   "scripts": {

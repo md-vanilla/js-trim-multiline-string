@@ -6,18 +6,3 @@ String.prototype.mtrim = mTrim;
 module.exports = String;
 module.exports = { mtrim: mTrim };
 
-const example = ` 
-  this
-  is
-    a
-multiline
-  string
-`;
-
-console.log(
-  `
-          example: ${example}
-
-          trimmed: ${example.mtrim()}
-  `
-);
