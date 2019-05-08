@@ -21,9 +21,9 @@ $ npm install --save trim-multiline-string
 ## Usage
 
 ```js
-const mtrim = require('trim-multiline-string');
+const { mtrim } = require('trim-multiline-string');
 console.log({
-  str: trim(str)
+  str: mtrim(str)
 })
 ```
 
