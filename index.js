@@ -1,6 +1,6 @@
-function mTrim ( str ) {
-  if ( Array.isArray(str) ) { str = str[0] }
-  if ( ! str ) { str = this; }
+function mTrim ( str ) { // parameter is for the exporting mtrim function.
+  if ( Array.isArray(str) ) { str = str[0] } // for tagged template implementation.
+  if ( ! str ) { str = this; } // for prototype implementation.
   if ( str ) {
     return str.split( '\n' ).map(x => x.trim()).join('\n')
   }
