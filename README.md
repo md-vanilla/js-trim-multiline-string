@@ -2,14 +2,71 @@
 
 multiline strings are a pain in javascript.
 
-the most readable multiline string is as follows: 
+mtrim - trim a multiline strings, a better way to make multiline strings.
+
+#### Expected Result:
 ```javascript
- const str = ` this 
-               is 
-               a
-               multiline
-               string
-             `
+"
+this 
+is 
+a
+multiline
+string
+"
+```
+
+#### Before mtrim:
+
+```javascript
+def multilineStringExample() {
+  const  stringConcatenation  = '' +
+    'this ' +
+    'is' +
+    'a' +
+    'multiline' +
+    'string' +
+    '';
+    
+  const templateLiteral = `
+this
+is
+a
+multiline
+string
+`;
+
+  return stringConcatenation;  
+}
+```
+
+#### After (Option 1):
+
+```javascript
+def multilineStringExample() {
+  const taggedTemplate = mtrim ` 
+    this 
+    is 
+    a
+    multiline
+    string
+  `
+  return str
+}
+```
+
+#### After (Option 2):
+
+```javascript
+def multilineStringExample() {
+  const stringPrototype = ` 
+    this 
+    is 
+    a
+    multiline
+    string
+  `.mtrim
+  return str
+}
 ```
 
 ## Install
@@ -18,16 +75,25 @@ the most readable multiline string is as follows:
 $ npm install --save trim-multiline-string
 ```
 
-## Usage
+## FullUsage, (use the library as a Function, Tagged Template, Prototype Function)
 
 ```js
 const { mtrim } = require('trim-multiline-string');
-console.log({
-  str: mtrim(str)
-})
+console.log(
+
+  mtrim(str),
+
+  mtrim(`str`),
+  
+  mtrim`check it out!`,
+  
+  `str`.mtrim
+)
+
 ```
 
 ## Related
+- [`multiline`](https://github.com/sindresorhus/multiline) - Multiline string using anonymous function, and function call.
 - [`trim-newlines`](https://github.com/sindresorhus/trim-newlines) - Similar to `String#trim()` but removes only newlines
 - [`trim-right`](https://github.com/sindresorhus/trim-right) - Similar to `String#trim()` but removes only whitespace on the right
 - [`trim-off-newlines`](https://github.com/stevemao/trim-off-newlines) - Similar to `String#trim()` but removes only newlines
