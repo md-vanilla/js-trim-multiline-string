@@ -1,8 +1,8 @@
 # trim-multiline-string [![Build Status](https://travis-ci.org/sindresorhus/trim-left.svg?branch=master)](https://travis-ci.org/sindresorhus/trim-left)
 
-multiline strings are a pain in javascript.
+The multiline string you always wanted.
 
-mtrim - trim a multiline strings, a better way to make multiline strings.
+mtrim - A better way to make a multiline string. By trimming a miltiline string.
 
 #### Expected Result:
 ```javascript
