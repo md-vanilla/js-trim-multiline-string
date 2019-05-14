@@ -35,7 +35,8 @@ def multilineStringExample() {
 
 ```javascript
 def multilineStringExample() {
-  const taggedTemplate = mtrim ` this 
+  const taggedTemplate = mtrim ` 
+    this 
     is 
     a
     multiline
