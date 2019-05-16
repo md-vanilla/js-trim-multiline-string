@@ -2,13 +2,13 @@
 
 multiline strings are a pain in javascript.
 
-the most readable multiline string is as follows: 
+the most readable multiline string is as follows:
 
 #### Expected Result:
 ```javascript
 "
-this 
-is 
+this
+is
 a
 multiline
 string
@@ -27,7 +27,7 @@ def multilineStringExample() {
     'string' +
     '';
 
-  return stringConcatenation;  
+  return stringConcatenation;
 }
 ```
 
@@ -35,9 +35,9 @@ def multilineStringExample() {
 
 ```javascript
 def multilineStringExample() {
-  const taggedTemplate = mtrim ` 
-    this 
-    is 
+  const taggedTemplate = mtrim `
+    this
+    is
     a
     multiline
     string
@@ -52,7 +52,7 @@ def multilineStringExample() {
 $ npm install --save trim-multiline-string
 ```
 
-## FullUsage, (Use the library as a Function, Tagged Template, Prototype Function)
+## FullUsage, (Use the library as a Function, Tagged Template, Prototype Function), If Indent present keep Indent.!
 
 ```js
 const { mtrim } = require('trim-multiline-string');
@@ -61,15 +61,21 @@ console.log(
   mtrim(str),
 
   mtrim(`str`),
-  
+
   mtrim`
     check it out!
   `,
-  
+
   mtrim
     `check it out!`,
-  
+
   `str`.mtrim()
+
+  `
+   Keep Indent
+   Implementation
+   By Passing Number!
+  `.mtrim(3)
 )
 
 ```
