@@ -5,13 +5,15 @@ const numSpaces = (lines) =>
   }, 0)
 
 
-function mTrim ( str ) { // parameter is for the exporting mtrim function.
+function mTrim ( str, startingPad=0 ) { // parameter is for the exporting mtrim function.
   if ( Array.isArray(str) ) { str = str[0] } // for tagged template implementation.
+  if ( typeof str === "number" && this ) { startingPad = str; str = this; }
   if ( ! str ) { str = this; } // for prototype implementation.
+
   if ( str ) {
 
     const lines = str.split( '\n' )
-    const delSpacesNum = numSpaces(lines)
+    const delSpacesNum = numSpaces(lines) - startingPad
 
     return lines.map( (x, index) => (x.search(/[^\s]/) == -1) ? '' : (index > 0) ? x.substring(delSpacesNum) : x ).join('\n')
   }
