@@ -18,7 +18,7 @@ string
 #### Before:
 
 ```javascript
-def multilineStringExample() {
+const multilineStringExample = () => {
   const  stringConcatenation  = '' +
     'this ' +
     'is' +
@@ -34,7 +34,7 @@ def multilineStringExample() {
 #### After:
 
 ```javascript
-def multilineStringExample() {
+const multilineStringExample = () => {
   const taggedTemplate = mtrim `
     this
     is
