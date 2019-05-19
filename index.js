@@ -1,7 +1,7 @@
 const numSpaces = (lines) =>
   lines.reduce((acc, cur) => {
-    const  index = cur.search(/[^\s]/)
-    return ( index > 0 && ( acc == 0  || index < acc ) ) ? index : acc
+    const indexOfFirstCharacter = cur.search(/[^\s]/)
+    return ( indexOfFirstCharacter >= 0 && ( acc == 0  || indexOfFirstCharacter < acc ) ) ? indexOfFirstCharacter : acc
   }, 0)
 
 
